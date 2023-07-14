@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>aptron</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet" integrity="...">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="..." crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+	integrity="..." crossorigin="anonymous"></script>
+
+<meta charset="ISO-8859-1">
+<title>aptron</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link href="/css/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Crete+Round'
+	rel='stylesheet' type='text/css'>
+<!-- Bootstrap Icons stylesheet -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" th:href="@{/index}" id="institue-name"><img
+			alt="" src="/img/logo.png"></a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/index}"><i
+						class="bi bi-house-door-fill"></i>Home </a></li>
+
+				<li class="nav-item"><a class="nav-link"
+					th:href="@{/students/new}"><i class="bi bi-award-fill"></i>Apply
+						For Enroll</a></li>
+
+			</ul>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item"><a class="nav-link" href="#"
+					style="color: white;"><i class="bi bi-envelope"></i>info@aptrongurgaon.in</a></li>
+			</ul>
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item"><a class="nav-link" href="#"
+					style="color: white;"><i class="bi bi-phone"></i>+917568686868</a></li>
+			</ul>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- 			<ul class="navbar-nav ms-auto"> -->
+			<!-- 				<li class="nav-item mb-2"><a href="#" -->
+			<!-- 					onclick="checkPassword();" class="nav-link p-0 text-muted" -->
+			<!-- 					style="background-color: white; color: black;">Admin</a></li> -->
+			<!-- 			</ul> -->
+
+			<ul>
+				<li><button type="button" class="btn btn-primary"
+						data-bs-toggle="modal" data-bs-target="#loginModal">Admin</button></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div id="primary-content">
+			<div class="wrapper">
+				<article>
+					<h3>Overview</h3>
+					<p>Since 2003, APTRON Solutions has provided individual and
+						corporate clients with a superior learning experience under the
+						brand name of Netexperts India. As a trusted education partner we
+						deliver more than 500 authorized IT training courses for 20+
+						vendors from such leading technology firms as Oracle, SAP,
+						CompTIA, Red Hat, VMware, Salesforce, etc. We leverage these
+						vendors professional technical training content and combine it
+						with our award-winning course instructors to produce a
+						consistently superior level of training. APTRON Solutions offers
+						strategic training paths for the certification skills required to
+						support today's technologies, while offering a broad curriculum of
+						application focused courses for clients looking to implement
+						new/upgraded business applications.</p>
+					<a href="#"><img src="images/video-placeholder.jpg"
+						alt="video placeholder" /></a>
+				</article>
+			</div>
+		</div>
+		<div id="secondary-content">
+			<div class="wrapper">
+				<article
+					style="background-image: url('images/article-image-1.jpg');">
+					<div class="overlay">
+						<h4>Address</h4>
+						<p>
+							<small>B-19, OLD DLF COLONY Gurgaon, Gurgaon Sector 14,
+								Gurgaon, India - 122022 Landmark: Behind state bank of india</small>
+						</p>
+						<a href="#" class="more-link">View more</a>
+					</div>
+				</article>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+	<div class="container">
+		<hr>
+		<footer class="py-5">
+			<div class="row">
+				<div class="col-2">
+					<h5>Menu</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a th:href="@{/index}"
+							class="nav-link p-0 text-muted">Home</a></li>
+						<li class="nav-item mb-2"><a th:href="@{@{/students/new}}"
+							class="nav-link p-0 text-muted">Student</a></li>
+						<li class="nav-item mb-2"><a href="#"
+							onclick="checkPassword();" class="nav-link p-0 text-muted">Admin</a></li>
+						<li class="nav-item mb-2"><a th:href="@{/faq}"
+							class="nav-link p-0 text-muted">FAQs</a></li>
+						<li class="nav-item mb-2"><a th:href="@{/about}"
+							class="nav-link p-0 text-muted">About</a></li>
+					</ul>
+				</div>
+				<div class="col-2"></div>
+				<div class="col-2"></div>
+
+
+				<div class="col-4 offset-1">
+					<form>
+						<h5>Subscribe to our institue</h5>
+						<p>Monthly digest of whats new and exciting from us.</p>
+						<div class="d-flex w-100 gap-2">
+							<label for="newsletter1" class="visually-hidden">Email
+								address</label> <input id="newsletter1" name="subEmail" type="email"
+								class="form-control" placeholder="Email address"
+								required="required">
+							<button class="btn btn-primary" type="button" id="subscribe">Subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="d-flex justify-content-between py-4 my-4 border-top">
+				<p>&copy; 2023 Aptron, Inc. All rights reserved.</p>
+				<ul class="list-unstyled d-flex">
+					<li class="ms-3"><a class="link-dark" href="#"><svg
+								class="bi" width="24" height="24">
+								<use xlink:href="#twitter" /></svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg
+								class="bi" width="24" height="24">
+								<use xlink:href="#instagram" /></svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg
+								class="bi" width="24" height="24">
+								<use xlink:href="#facebook" /></svg></a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+
+
+	<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+
+
+
+	<!--   model  start -->
+
+
+	<div class="modal fade" id="loginModal" tabindex="-1"
+		aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="container py-4">
+					<div class="row g-0 align-items-center">
+						<div class="col-lg-12 mb-10 mb-lg-0">
+							<form>
+								<h3>Admin Panel</h3>
+								<div class="form-outline mb-4">
+									<label class="form-label" for="form2Example1"> Username</label>
+									<input type="text" class="form-control" id="username"
+										name="username" />
+								</div>
+								<div class="form-outline mb-4">
+									<label class="form-label" for="form2Example2">Password</label>
+									<input type="password" class="form-control" id="password"
+										name="password" />
+								</div>
+								<button type="button" class="btn btn-primary btn-block mb-4"
+									id="signInButton" onclick="checkPassword();">Sign in</button>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--    model end -->
+
+	<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function checkPassword() {
+			// Prompt user for password
+			// Get the values of the username and password input fields
+			var username = document.querySelector('#username').value;
+			var password = document.querySelector('#password').value;
+			debugger;
+			// AJAX POST request
+			$.ajax({
+				type : "POST",
+				url : "/check_password",
+				data : {
+					username : username,
+					password : password
+				},
+				success : function(response) {
+					if (response.success === "Valid Admin") {
+						// Redirect to Admin page
+						window.location.href = "/teachers";
+					} else {
+						// Display error message
+						alert("Incorrect password. Please try again.");
+					}
+				},
+				error : function() {
+					alert("Error occurred while processing your request.");
+				}
+			});
+		}
+
+		var loginModal = new bootstrap.Modal(document
+				.getElementById('loginModal'));
+		var loginButton = document.querySelector('#loginButton');
+		loginButton.addEventListener('click', function() {
+			loginModal.show();
+		});
+	</script>
+
+	<script>
+		$(document)
+				.ready(
+						function() {
+							$("#subscribe")
+									.click(
+											function() {
+												var emailInput = $("#newsletter1");
+												if (emailInput.val() === "") {
+													emailInput.focus();
+												} else {
+
+													// AJAX POST request
+													$
+															.ajax({
+																type : "POST",
+																url : "/subscribe",
+																data : {
+																	email : emailInput
+																			.val()
+																},
+																success : function(
+																		response) {
+																	if (response.success) {
+																		// Subscription successful
+																		alert("Thank you for subscribing!");
+
+																	} else {
+																		// Subscription failed
+																		alert("You Allredy Subscribed !");
+																	}
+																},
+																error : function() {
+																	alert("Error occurred while processing your request.");
+																}
+															});
+												}
+											});
+						});
+	</script>
+
+
+</body>
+</html>
